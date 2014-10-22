@@ -1,0 +1,7 @@
+{% load static from staticfiles %}
+<div class="col-xs-6 col-md-4">
+    <img class="img-thumbnail" src="{% if work_item.image %}{{ work_item.image.url }}{% else %}{% static 'works/img/default-image.png' %}{% endif %}" alt="{{ work_item.title }}">
+    <h2>{{ work_item.title }}</h2>
+    {{ work_item.introduction | truncatechars:'64' | linebreaks }}
+    <p><a class="btn btn-default" href="{% url 'works:item' work_item.link %}" role="button">查看更多 »</a></p>
+</div>

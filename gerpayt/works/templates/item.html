@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block body %}
+<div class="row featurette">
+    <div class="col-sm-7">
+        <h2 class="featurette-heading">{{ work_item.title }} <small class="text-muted">.</small></h2>
+        <div class="lead">{{ work_item.introduction | linebreaks }}</div>
+    </div>
+    <div class="col-sm-5">
+        <img class="featurette-image img-responsive" src="{% if work_item.image %}{{ work_item.image.url }}{% else %}{% static 'works/img/default-image.png' %}{% endif %}" alt="{{ work_item.title }}">
+    </div>
+</div>
+{% endblock %}

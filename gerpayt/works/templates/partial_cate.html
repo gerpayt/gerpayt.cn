@@ -1,0 +1,20 @@
+<div class="row featurette">
+    <div class="col-sm-7">
+        <h2 class="featurette-heading">{{ work_cate.title }} <small class="text-muted">.</small></h2>
+        <p class="lead">{{ work_cate.introduction }}</p>
+    </div>
+    <div class="col-sm-5">
+        <img class="featurette-image img-responsive" data-src="holder.js/500x300/auto" alt="500x300">
+    </div>
+</div>
+
+<hr class="featurette-divider">
+<div class="row work-list">
+{% for work_item in work_cate.workitem_set.all %}
+    {% include 'partial_item.html' %}
+{% endfor %}
+</div>
+
+{% if not forloop.last %}
+    <hr class="featurette-divider">
+{% endif %}

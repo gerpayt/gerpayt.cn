@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% if work_cate.workitem_set.all %}
+   {% include 'partial_cate.html' %}
+{% else %}
+    <p>No work cate are available.</p>
+{% endif %}
+{% endblock %}

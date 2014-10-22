@@ -1,0 +1,42 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block head_description %}个人作品展示{% endblock %}">
+    <meta name="keywords" content="{% block head_keywords %}个人,作品,展示{% endblock %}">
+    <meta name="author" content="{% block head_author %}陈丰{% endblock %}">
+
+    <title>{% block head_title %}个人作品展示{% endblock %}</title>
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="data:text/css;charset=utf-8," data-href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}" rel="stylesheet" id="bs-theme-stylesheet">
+    <link href="{% static 'works/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'works/css/work.css' %}" rel="stylesheet">
+    <link href="{% static 'works/css/font-icon.css' %}" rel="stylesheet">
+
+    <link rel="apple-touch-icon-precomposed" href="{% static 'base/apple-touch-icon-precomposed.png' %}">
+    <link rel="icon" href="{% static 'base/favicon.ico' %}/favicon.ico">
+
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<div class="container">
+
+{% block body %}
+
+{% endblock %}
+
+</div>
+
+{% include 'footer.html' %}
+
+<script src="{% static 'jquery/jquery.min.js' %} "></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %} "></script>
+
+</body>
+</html>
