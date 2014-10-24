@@ -11,6 +11,7 @@ urlpatterns = patterns(
     # url(static.static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)),
 
     url(r'^works/', include('works.urls', namespace='works')),
+    url(r'^books/', include('books.urls', namespace='books')),
     url(r'^admin/', include(admin.site.urls)),
 
 )
