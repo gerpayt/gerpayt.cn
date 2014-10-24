@@ -1,0 +1,16 @@
+<div class="row featurette">
+    <div class="col-sm-7">
+        <h2 class="featurette-heading">{{ book_tag.title }}</h2>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+<div class="row book-list">
+{% for book_item in book_tag.bookitem_set.all %}
+    {% include 'books/partial_item.html' %}
+{% endfor %}
+</div>
+
+{% if not forloop.last %}
+    <hr class="featurette-divider">
+{% endif %}

@@ -12,10 +12,8 @@
 .work-list {
   margin-bottom: 20px;
   text-align: center;
-  & p:nth-child(3) {
+  & p {
     text-align: left;
-    height: 58px;
-    overflow: hidden;
   }
 
   & div {
@@ -26,4 +24,22 @@
 
 .featurette-divider {
   margin: 20px 0;
+}
+
+.book-mask {
+  position: absolute;
+  bottom: 0;
+  margin: 0px 15px;
+  padding: 10px;
+  background-color: gray;
+  opacity: 0.85;
+  color: white;
+  left: 0;
+  right: 0;
+  & a {
+    color: white;
+  }
+  & a:hover {
+    text-decoration: none;
+  }
 }

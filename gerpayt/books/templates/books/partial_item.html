@@ -1,0 +1,7 @@
+{% load static from staticfiles %}
+<div class="col-xs-4 col-md-3">
+    <a href="{% url 'books:item' book_item.link %}">
+        <img class="img-thumbnail" src="{% if book_item.image %}{{ book_item.image.url }}{% else %}{% static 'books/img/default-image.png' %}{% endif %}" alt="{{ book_item.title }}">
+    </a>
+    <p class="book-mask"><a href="{% url 'books:item' book_item.link %}">{{ book_item.title }}</a></p>
+</div>

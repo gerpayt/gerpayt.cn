@@ -1,0 +1,36 @@
+/*
+.work-item {
+  .make-md-column(4; @gutter: @grid-gutter-width);
+  text-align: center;
+}
+*/
+.work-list {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.work-list p {
+  text-align: left;
+}
+.work-list div {
+  height: 400px;
+}
+.featurette-divider {
+  margin: 20px 0;
+}
+.book-mask {
+  position: absolute;
+  bottom: 0;
+  margin: 0px 15px;
+  padding: 10px;
+  background-color: gray;
+  opacity: 0.85;
+  color: white;
+  left: 0;
+  right: 0;
+}
+.book-mask a {
+  color: white;
+}
+.book-mask a:hover {
+  text-decoration: none;
+}

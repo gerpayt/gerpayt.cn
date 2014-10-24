@@ -1,0 +1,9 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+{% if book_tag.bookitem_set.all %}
+   {% include 'books/partial_tag.html' %}
+{% else %}
+    <p>No book tag are available.</p>
+{% endif %}
+{% endblock %}

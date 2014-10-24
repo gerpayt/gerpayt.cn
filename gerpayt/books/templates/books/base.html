@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block css_part %}
+<link href="{% static 'gerpayt/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'gerpayt/css/font-icon.css' %}" rel="stylesheet">
+<link href="{% static 'books/css/work.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+<div class="row">
+  <div class="col-sm-9">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div class="col-sm-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">Search</div>
+      <div class="panel-body">
+        <form action="{% url 'books:search' %}" method="post">
+        <div class="input-group">
+          {% csrf_token %}
+          <input type="text" class="form-control" name="keyword" value="{{ search_keyword }}">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">Go!</button>
+          </span>
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Tags</div>
+      <div class="panel-body">
+        {% if book_tag_list %}
+          {% for book_tag in book_tag_list %}
+            <a class="label label-default" href="{% url 'books:tag' book_tag.link %}">{{ book_tag.title }}</a>
+          {% endfor %}
+        {% else %}
+          <p>No book tag are available.</p>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'books/base.html' %}
+{% load static from staticfiles %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8">
+        <h2 class="featurette-heading">{{ book_item.title }} <small class="text-muted">.</small></h2>
+        <div class="lead">{{ book_item.introduction | linebreaks }}</div>
+        <p><a class="btn btn-default" href="{{ book_item.file.url }}">Download ({{ book_item.file.size | filesizeformat }})</a> </p>
+    </div>
+    <div class="col-sm-4">
+        <img class="featurette-image img-responsive" src="{% if book_item.image %}{{ book_item.image.url }}{% else %}{% static 'books/img/default-image.png' %}{% endif %}" alt="{{ book_item.title }}">
+    </div>
+</div>
+{% endblock %}

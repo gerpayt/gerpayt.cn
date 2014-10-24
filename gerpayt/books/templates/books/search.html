@@ -1,0 +1,14 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    <h2>Result for '{{ search_keyword }}'</h2>
+    {% if book_item_list %}
+    <div class="row book-list">
+      {% for book_item in book_item_list %}
+        {% include 'books/partial_item.html' %}
+      {% endfor %}
+    </div>
+    {% else %}
+      <p>No books searched.</p>
+    {% endif %}
+{% endblock %}

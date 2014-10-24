@@ -1,0 +1,13 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    {% if book_item_list %}
+    <div class="row book-list">
+      {% for book_item in book_item_list %}
+        {% include 'books/partial_item.html' %}
+      {% endfor %}
+    </div>
+    {% else %}
+      <p>No books are available.</p>
+    {% endif %}
+{% endblock %}

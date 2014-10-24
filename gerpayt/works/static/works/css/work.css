@@ -8,8 +8,10 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.work-list p {
+.work-list p:nth-child(3) {
   text-align: left;
+  height: 58px;
+  overflow: hidden;
 }
 .work-list div {
   height: 400px;
