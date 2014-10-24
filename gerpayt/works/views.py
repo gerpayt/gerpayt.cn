@@ -1,17 +1,16 @@
 from django.shortcuts import get_object_or_404, render
 
-# Create your views here.
 from django.http import HttpResponse
 
 from models import WorkCate, WorkItem
 
 
 def index(request):
-    work_cate_list = WorkCate.objects.order_by('sort')
+    work_cate_list = WorkCate.objects.all()
     context = {
         'work_cate_list': work_cate_list,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'works/index.html', context)
 
 
 def cate(request, cate_link):
@@ -19,7 +18,7 @@ def cate(request, cate_link):
     context = {
         'work_cate': work_cate,
     }
-    return render(request, 'cate.html', context)
+    return render(request, 'works/cate.html', context)
 
 
 def item(request, item_link):
@@ -27,4 +26,4 @@ def item(request, item_link):
     context = {
         'work_item': work_item,
     }
-    return render(request, 'item.html', context)
+    return render(request, 'works/item.html', context)

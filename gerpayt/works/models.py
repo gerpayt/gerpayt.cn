@@ -19,6 +19,9 @@ class WorkCate(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ['sort', '-add_time']
+
 
 class WorkItem(models.Model):
     id = models.AutoField(u'作品ID', auto_created=True, serialize=False, primary_key=True)
@@ -34,5 +37,5 @@ class WorkItem(models.Model):
     def __str__(self):
         return self.title
 
-    def get_image_url(self):
-        return os.path.join(settings.MEDIA_URL, self.image.url)
+    class Meta:
+        ordering = ['sort', '-add_time']
