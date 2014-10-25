@@ -1,11 +1,15 @@
+{% load static from staticfiles %}
+
+<div class="container">
 <div class="row featurette">
     <div class="col-sm-7">
         <h2 class="featurette-heading">{{ work_cate.title }}</h2>
         <p class="lead">{{ work_cate.introduction }}</p>
     </div>
     <div class="col-sm-5">
-        <img class="featurette-image img-responsive" data-src="holder.js/500x300/auto" alt="500x300">
+        <img class="featurette-image img-responsive" src="{% if work_cate.image %}{{ work_cate.image.url }}{% else %}{% static 'works/img/default-image.png' %}{% endif %}" alt="{{ work_cate.title }}">
     </div>
+</div>
 </div>
 
 <hr class="featurette-divider">

@@ -8,13 +8,13 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.work-list p:nth-child(3) {
+.work-list .caption {
+  height: 180px;
+}
+.work-list .caption p:nth-child(2) {
   text-align: left;
   height: 58px;
   overflow: hidden;
-}
-.work-list div {
-  height: 400px;
 }
 .featurette-divider {
   margin: 20px 0;
