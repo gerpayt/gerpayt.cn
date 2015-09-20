@@ -1,0 +1,285 @@
+{% extends 'resume/base.html' %}
+{% load static from staticfiles %}
+
+{% block head_description %}个人简历{% endblock %}
+{% block head_keywords %}个人,简历{% endblock %}
+
+{% block body %}
+
+<div class="resume-wrapper">
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="4">
+            <span class="resume-name">陈丰</span>
+        </td>
+        <td rowspan="5">
+            <img width="150" src="{% static 'resume/image/photo.jpg' %}" />
+        </td>
+    </tr>
+    <tr>
+        <td width="70">性别：</td>
+        <td width="180">男</td>
+        <td width="100">出生年月：</td>
+        <td width="160">1991-08-26</td>
+    </tr>
+    <tr>
+        <td>手机：</td>
+        <td>15271810369</td>
+        <td>最高学历：</td>
+        <td>硕士</td>
+    </tr>
+    <tr>
+        <td>邮箱：</td>
+        <td>gerpayt@qq.com</td>
+        <td>政治面貌：</td>
+        <td>中共党员</td>
+    </tr>
+    <tr>
+        <td>地址：</td>
+        <td colspan="3">华中科技大学 南五楼 424 [430074]</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="4"><strong>教育背景</strong></td>
+    </tr>
+    <tr>
+        <td>2013.09-2016.06</td>
+        <td>华中科技大学</td>
+        <td>光学工程</td>
+        <td>硕士</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="lighter">主修课程:矩阵轮、并行程序设计、人工智能、机器学习与数据挖掘、SoC 设计方法</td>
+    </tr>
+    <tr>
+        <td>2009.09-2013.06</td>
+        <td>华中科技大学</td>
+        <td>光电信息工程</td>
+        <td>本科</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="lighter">主修课程:概率论、C 语言、数字电路、单片机、微机实验、计算机网络、数字图像处理</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>学生工作</strong></td>
+    </tr>
+    <tr>
+        <td>2013.09‐2015.07</td>
+        <td>光学与电子信息学院</td>
+        <td>助教</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">负责单片机、微机原理、光电课程设计的作业批改、课下答疑、上机指导、实物装配和验收等工作</td>
+    </tr>
+    <tr>
+        <td>2011.04‐2015.06</td>
+        <td>学工处音控组</td>
+        <td>技术班长</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">负责学校各大场地招聘、会议、文艺晚会所需舞台音响灯光设备的操控维护及维修以及新成员培训</td>
+    </tr>
+    <tr>
+        <td>2010.03‐2013.06</td>
+        <td>学工处网络应用研发中心</td>
+        <td>程序员</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">负责学工处部分网站的设计、制作、维护,网站漏洞修补、服务器搭建等工作</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>实习经历</strong></td>
+    </tr>
+    <tr>
+        <td>2012.10‐2015.08</td>
+        <td>武汉鸣鸾信息科技有限公司</td>
+        <td>技术总监</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">负责“海投网”整个项目的架构设计、编码、测试、服务器运维、人员协调等工作</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>项目经验</strong></td>
+    </tr>
+    <tr>
+        <td>2014.04‐2014.06</td>
+        <td>音控组管理系统<a href="http://acg.husteye.cn" target="_blank"> <i class="glyphicon glyphicon-link"></i></a></td>
+        <td>全权负责</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">学校音控组内部管理系统,包含场地值班排班、人员信息录入、自动统计工时、邮件短信通知等功能</td>
+    </tr>
+    <tr>
+        <td>2011.11‐2012.03</td>
+        <td>光电学院选课系统<a href="http://oecss.husteye.cn" target="_blank"> <i class="glyphicon glyphicon-link"></i></a></td>
+        <td>全权负责</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">系统可完成全院多个专业多门课程的选课工作,可与学校 HUB 系统对接,累计协助 2 千多同学选课</td>
+    </tr>
+    <tr>
+        <td>2011.07‐2011.08</td>
+        <td>道口镇居民基本情况管理系统<a href="http://61.54.6.41:81" target="_blank"> <i class="glyphicon glyphicon-link"></i></a></td>
+        <td>全权负责</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">全镇一万家庭和数万人口和的管理,可按不同条件搜索、导出,配合地图可实现人员地图定位</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>比赛经历</strong></td>
+    </tr>
+    <tr>
+        <td>2014.06‐2014.06</td>
+        <td>华中科技大学 HackDay 编程马拉松</td>
+        <td>个人组队</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">在 24 小时之内完成了百度云管家的 ftp 接口的设计和开发,可跨平台通过 ftp 工具访问百度云</td>
+    </tr>
+    <tr>
+        <td>2012.03‐2012.08</td>
+        <td>第三届全国光电设计竞赛</td>
+        <td>队长</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">基于 ARM Linux 的智能小车无人驾驶系统,参与方案、硬件设计、装配调试和系统驱动设计</td>
+    </tr>
+    <tr>
+        <td>2012.09‐2012.10</td>
+        <td>2009、2012 两度参加种子杯编程 PK 赛</td>
+        <td>个人组队</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="lighter">用 C 语言实现小型数据库引擎,支持基本插入、筛选、更新和删除等操作</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>荣誉奖励</strong></td>
+    </tr>
+    <tr>
+        <td rowspan="2">国家级</td>
+        <td colspan="2">第三届全国光电设计竞赛  优秀理论方案  优秀实物作品</td>
+    </tr>
+    <tr>
+        <td colspan="2">新新创业达人全国百强</td>
+    </tr>
+    <tr>
+        <td rowspan="2">省级</td>
+        <td colspan="2">湖北省优秀本科生毕业论文《基于 FPGA 的工件视觉同步系统软硬件设计》</td>
+    </tr>
+    <tr>
+        <td colspan="2">以创业青年的身份参与湖北省电视台 2015 羊年贺岁片的拍摄
+        <a href="http://v.qq.com/boke/page/t/0/d/t0147s7tr6d.html" target="_blank"> <i class="icon-play"></i></a></td>
+    </tr>
+    <tr>
+        <td rowspan="4">校级</td>
+        <td>种子杯编程大赛优胜奖</td>
+        <td>第七届智能车大赛第七名</td>
+    </tr>
+    <tr>
+        <td>华中科技大学三好学生</td>
+        <td>华中科技大学优秀干部</td>
+    </tr>
+    <tr>
+        <td>华中科技大学优秀毕业生</td>
+        <td>华中科技大学优秀团员</td>
+    </tr>
+    <tr>
+        <td>华中科技大学暑期社会实践优秀团队</td>
+        <td>华中科技大学暑期社会实践优秀个人</td>
+    </tr>
+    <tr>
+        <td>其他</td>
+        <td colspan="2">申报实用新型专利并通过审核</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="3"><strong>专业证书</strong></td>
+    </tr>
+    <tr>
+        <td>计算机三级(数据库)</td>
+        <td>计算机四级(网络工程师)</td>
+        <td>软件水平考试(中级嵌入式)</td>
+    </tr>
+    <tr>
+        <td>英语四级(526)</td>
+        <td>英语六级(470)</td>
+        <td>机动车驾驶证(C1)</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td colspan="2"><strong>计算机技能</strong></td>
+    </tr>
+    <tr>
+        <td>精通</td>
+        <td>Linux HTML php yii thinkphp python flask mysql nginx apache</td>
+    </tr>
+    <tr>
+        <td>熟悉</td>
+        <td>CSS JavaScript jQuery AngularJs redis memcache mongodb C</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td><strong>性格特点</strong></td>
+    </tr>
+    <tr>
+        <td>沉着稳重 为人低调 有耐心 做事精益求精 创造力强 动手能力强 责任心强</td>
+    </tr>
+    </tbody>
+    </table>
+
+    <table class="table">
+    <tbody>
+    <tr>
+        <td><strong>个人特点</strong></td>
+    </tr>
+    <tr>
+        <td>丰富的 PHP 开发和服务器运维经验，良好的编码风格，良好的英文文档阅读能力，善于独立解决问题，善于使用开源代码，善于学习新知识，对编程极度热爱。</td>
+    </tr>
+    </tbody>
+    </table>
+
+
+</div>
+{% endblock %}
