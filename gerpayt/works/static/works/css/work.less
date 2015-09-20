@@ -13,8 +13,11 @@
   margin-bottom: 20px;
   text-align: center;
   & .caption {
-      height: 180px;
-    & p:nth-child(2) {
+    & a:hover {
+      text-decoration: none;
+    }
+
+    & p {
       text-align: left;
       height: 58px;
       overflow: hidden;
@@ -22,6 +25,17 @@
   }
 }
 
+.cate-banner {
+  position: relative;
+  & .cate-caption {
+    position: absolute;
+    bottom: 0;
+    padding: 0 20px;
+    color: #ffffff;
+  }
+}
+
 .featurette-divider {
   margin: 20px 0;
 }
+

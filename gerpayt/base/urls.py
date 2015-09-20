@@ -12,6 +12,8 @@ urlpatterns = patterns(
 
     url(r'^works/', include('works.urls', namespace='works')),
     url(r'^books/', include('books.urls', namespace='books')),
+    url(r'^resume/', include('resume.urls', namespace='resume')),
+    url(r'', include('resume.urls', namespace='resume')),
     url(r'^admin/', include(admin.site.urls)),
 
 )

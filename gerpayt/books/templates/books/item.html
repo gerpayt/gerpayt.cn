@@ -4,7 +4,7 @@
 {% block content %}
 <div class="row">
     <div class="col-sm-8">
-        <h2 class="featurette-heading">{{ book_item.title }} <small class="text-muted">.</small></h2>
+        <h2 class="featurette-heading">{{ book_item.title }}</h2>
         <div class="lead">{{ book_item.introduction | linebreaks }}</div>
         <p><a class="btn btn-default" href="{{ book_item.file.url }}">Download ({{ book_item.file.size | filesizeformat }})</a> </p>
     </div>

@@ -1,48 +1,93 @@
-{% extends 'base.html' %}
 {% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block head_description %}个人作品展示{% endblock %}">
+    <meta name="keywords" content="{% block head_keywords %}个人,作品,展示{% endblock %}">
+    <meta name="author" content="{% block head_author %}陈丰{% endblock %}">
 
-{% block css_part %}
-<link href="{% static 'gerpayt/css/main.css' %}" rel="stylesheet">
-<link href="{% static 'gerpayt/css/font-icon.css' %}" rel="stylesheet">
-<link href="{% static 'books/css/work.css' %}" rel="stylesheet">
-{% endblock %}
+    <title>{% block head_title %}个人作品展示{% endblock %}</title>
 
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="data:text/css;charset=utf-8," data-href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}" rel="stylesheet" id="bs-theme-stylesheet">
+
+    {% block css_part %}
+    <link href="{% static 'gerpayt/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'gerpayt/css/font-icon.css' %}" rel="stylesheet">
+    <link href="{% static 'books/css/books.css' %}" rel="stylesheet">
+    {% endblock %}
+
+    <link rel="apple-touch-icon-precomposed" href="{% static 'base/apple-touch-icon-precomposed.png' %}">
+    <link rel="icon" href="{% static 'base/favicon.ico' %}/favicon.ico">
+
+</head>
+<body>
+
+<header class="books-nav">
+
+    <ul class="nav navbar-nav">
+        <li><a href="#"><span class="icon-home"></span></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-stack"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#tech"><span class="icon-pen"></span> 博客</a></li>
+                <li><a href="#note"><span class="icon-notebook"></span> 笔记</a></li>
+                <li><a href="#life"><span class="icon-mug"></span> 生活</a></li>
+                <li><a href="#image"><span class="icon-images"></span> 图片</a></li>
+                <li><a href="#music"><span class="icon-music"></span> 音乐</a></li>
+                <li><a href="#download"><span class="icon-drawer"></span> 资源</a></li>
+                <li><a href="#about"><span class="icon-user"></span> 关于</a></li>
+                <li><a href="#">作品展示</a></li>
+                <li><a href="#">酷站推荐</a></li>
+                <li><a href="#">求职简历</a></li>
+                <li><a href="#">其他信息</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <ul class="nav navbar-nav pull-right">
+<form class="navbar-form navbar-left" role="search">
+ <div class="input-group">
+      <input type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="icon-mug"></span> </button>
+      </span>
+    </div><!-- /input-group -->
+</form>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-stack"></span></a>
+            <ul class="dropdown-menu dropdown-menu-tags" role="menu">
+                {% for book_tag in book_tag_list %}
+                <li><a href="#{{ book_tag.title }}"><span class="icon-tag"></span> {{ book_tag.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li><a href="#"><span class="icon-tag"></span></a></li>
+    </ul>
+
+</header>
+
+
+<div class="books-container">
 
 {% block body %}
-<div class="row">
-  <div class="col-sm-9">
-    {% block content %}
-    {% endblock %}
-  </div>
-  <div class="col-sm-3">
-    <div class="panel panel-default">
-      <div class="panel-heading">Search</div>
-      <div class="panel-body">
-        <form action="{% url 'books:search' %}" method="post">
-        <div class="input-group">
-          {% csrf_token %}
-          <input type="text" class="form-control" name="keyword" value="{{ search_keyword }}">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Go!</button>
-          </span>
-        </div>
-        </form>
-      </div>
-    </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">Tags</div>
-      <div class="panel-body">
-        {% if book_tag_list %}
-          {% for book_tag in book_tag_list %}
-            <a class="label label-default" href="{% url 'books:tag' book_tag.link %}">{{ book_tag.title }}</a>
-          {% endfor %}
-        {% else %}
-          <p>No book tag are available.</p>
-        {% endif %}
-      </div>
-    </div>
-
-  </div>
-</div>
 {% endblock %}
+
+</div>
+
+
+<script src="{% static 'jquery/jquery.min.js' %} "></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %} "></script>
+
+    {% block js_part %}
+    {% endblock %}
+
+</body>
+</html>
+
+

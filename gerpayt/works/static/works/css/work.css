@@ -8,13 +8,22 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.work-list .caption {
-  height: 180px;
+.work-list .caption a:hover {
+  text-decoration: none;
 }
-.work-list .caption p:nth-child(2) {
+.work-list .caption p {
   text-align: left;
   height: 58px;
   overflow: hidden;
+}
+.cate-banner {
+  position: relative;
+}
+.cate-banner .cate-caption {
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px;
+  color: #ffffff;
 }
 .featurette-divider {
   margin: 20px 0;

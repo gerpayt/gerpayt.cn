@@ -1,13 +1,25 @@
 {% extends 'books/base.html' %}
+{% load static from staticfiles %}
 
-{% block content %}
-    {% if book_item_list %}
-    <div class="row book-list">
-      {% for book_item in book_item_list %}
-        {% include 'books/partial_item.html' %}
-      {% endfor %}
-    </div>
-    {% else %}
-      <p>No books are available.</p>
-    {% endif %}
+{% block body %}
+  {% if book_item_list %}
+      <div class="books-row book-list" style="z-index: 999">
+        <img class="background-image" src="{% static 'books/img/shelf-container.png' %}"/>
+        {% for book_item in book_item_list %}
+
+          {% include 'books/partial_item.html' %}
+
+          {% if forloop.counter|divisibleby:6 %}
+
+      </div>
+      <div class="books-row book-list" style="z-index: 997">
+        <img class="background-image" src="{% static 'books/img/shelf-container.png' %}"/>
+
+          {% endif %}
+        {% endfor %}
+      </div>
+
+  {% else %}
+    <p>No books are available.</p>
+  {% endif %}
 {% endblock %}
